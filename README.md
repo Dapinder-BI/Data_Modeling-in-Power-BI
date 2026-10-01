@@ -4,6 +4,45 @@ A portfolio project demonstrating how a disconnected, inconsistent collection of
 
 The project focuses on model design rather than dashboard styling: defining table grain, separating facts from dimensions, standardizing names, controlling filter direction, validating totals, and applying regional row-level security.
 
+## From business problem to solution
+
+### The business problem
+
+The organization had sales, orders, invoices, payments, shipments, inventory, campaigns, targets, customers, and products spread across disconnected operational tables. Several tables described the same business entities in different ways, yearly order data was separated, column names were inconsistent, and reporting attributes were mixed into transaction tables.
+
+This structure created three major business risks:
+
+- **Unreliable reporting:** ambiguous relationships and mismatched table grains could duplicate records or produce incorrect totals.
+- **Slow development and performance:** analysts had to repeatedly interpret technical source tables, while unnecessary columns increased model size and refresh effort.
+- **Poor governance:** inconsistent names, uncontrolled filter paths, and missing security rules made the model difficult to maintain and unsafe to distribute broadly.
+
+As a result, report developers could not confidently answer basic questions such as total sales, active customers, order-processing time, campaign performance, inventory levels, or progress against revenue targets.
+
+### The solution built
+
+The raw structure was redesigned as a governed dimensional model in Power BI. The solution:
+
+- Consolidates related source tables and standardizes them in Power Query.
+- Separates measurable business events into clearly defined fact tables.
+- Creates reusable customer, product, date, geography, campaign, and order-flag dimensions.
+- Preserves the correct grain for each business process.
+- Uses controlled one-to-many relationships with dimensions filtering facts.
+- Centralizes reusable DAX measures for consistent calculations.
+- Validates key totals throughout the transformation process.
+- Applies dynamic regional row-level security so users see only the data they are authorized to access.
+
+### How the solution helps users
+
+**Business users** receive consistent numbers across reports and can analyze sales, customers, products, campaigns, inventory, targets, and order timelines without needing to understand the raw source systems.
+
+**Report developers and analysts** can build visuals faster from friendly dimensions and trusted measures instead of recreating joins and calculations for every report.
+
+**Managers** gain a reliable view of performance across multiple business processes, including actual-versus-target analysis and the time between ordering, shipping, invoicing, and payment.
+
+**Data and BI teams** benefit from a model that is easier to refresh, test, troubleshoot, extend, secure, and hand over to other developers.
+
+The result is a scalable semantic layer that turns fragmented operational data into trustworthy, analysis-ready information.
+
 ## Before and after
 
 ### Raw source structure
