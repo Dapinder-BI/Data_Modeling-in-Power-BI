@@ -1,8 +1,8 @@
 # 📊 Data Modeling in Power BI
 
-## **A production-style Power BI case study that transforms fragmented, unreliable operational data into a trusted dimensional model.**
+## **A real-world Power BI data-modeling project based on challenges and solutions I have handled in professional BI work, recreated with simulated data.**
 
-### **Built to deliver accurate reporting, faster analysis, scalable development, and secure regional access.**
+### **It demonstrates the same end-to-end approach I use to turn fragmented operational data into accurate reporting, scalable analysis, and secure regional access.**
 
 <div align="center">
 
