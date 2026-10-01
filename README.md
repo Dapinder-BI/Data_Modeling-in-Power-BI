@@ -43,6 +43,19 @@ The raw structure was redesigned as a governed dimensional model in Power BI. Th
 
 The result is a scalable semantic layer that turns fragmented operational data into trustworthy, analysis-ready information.
 
+## Skills demonstrated
+
+- Power BI
+- Power Query
+- Dimensional modeling
+- Star schema design
+- DAX
+- Data validation
+- Relationship design
+- Surrogate key design
+- Row-level security
+- Analytics engineering
+
 ## Before and after
 
 ### Raw source structure
@@ -137,7 +150,3 @@ Model changes were checked incrementally to prevent totals from breaking silentl
 3. Review the model view, Power Query transformations, measures, relationships, and security role.
 
 > The repository includes the finished Power BI file and architecture diagrams. The original raw data files are not included.
-
-## Skills demonstrated
-
-Power BI, Power Query, dimensional modeling, star schema design, DAX, data validation, relationship design, surrogate keys, role-level security, and analytics engineering.
