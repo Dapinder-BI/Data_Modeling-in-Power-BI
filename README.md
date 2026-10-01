@@ -1,5 +1,9 @@
 # 📊 Data Modeling in Power BI
 
+## **A production-style Power BI case study that transforms fragmented, unreliable operational data into a trusted dimensional model.**
+
+### **Built to deliver accurate reporting, faster analysis, scalable development, and secure regional access.**
+
 <div align="center">
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Semantic%20Model-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
