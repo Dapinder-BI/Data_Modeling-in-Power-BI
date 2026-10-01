@@ -10,11 +10,23 @@ The project focuses on model design rather than dashboard styling: defining tabl
 
 The starting point contains disconnected Databricks-style source tables with inconsistent naming, duplicated entities, denormalized attributes, and multiple business processes.
 
+**Power BI model view before transformation**
+
+![Power BI model view before data modeling](assets/power-bi-before-modeling.png)
+
+**Conceptual view of the raw tables**
+
 ![Raw tables before modeling](assets/before-data-modeling.png)
 
 ### Final dimensional model
 
 The completed model uses reusable dimensions and governed one-to-many relationships across sales, order processing, inventory, campaigns, promotion coverage, and sales targets.
+
+**Power BI model view after transformation**
+
+![Power BI model view after data modeling](assets/power-bi-after-modeling.png)
+
+**Conceptual view of the dimensional model**
 
 ![Dimensional model after modeling](assets/after-data-modeling.png)
 
@@ -71,7 +83,9 @@ Model changes were checked incrementally to prevent totals from breaking silentl
 .
 |-- assets/
 |   |-- before-data-modeling.png
-|   `-- after-data-modeling.png
+|   |-- after-data-modeling.png
+|   |-- power-bi-before-modeling.png
+|   `-- power-bi-after-modeling.png
 |-- power-bi/
 |   `-- Power_BI_Data_Modeling_Project.pbix
 `-- README.md
