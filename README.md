@@ -33,23 +33,29 @@
 
 ## 🔄 Transformation: before → after
 
-| ❌ Before — disconnected source tables | ✅ After — governed dimensional model |
-|---|---|
-| Inconsistent names, duplicated entities, mixed grains, and no dependable relationship structure | Reusable dimensions, clearly defined facts, one-to-many relationships, and controlled filter direction |
-| ![Power BI model before data modeling](assets/power-bi-before-modeling.png) | ![Power BI model after data modeling](assets/power-bi-after-modeling.png) |
+### ❌ Before — disconnected source tables
 
-<details>
-<summary><strong>View the illustrated architecture comparison</strong></summary>
+Inconsistent names, duplicated entities, mixed grains, and no dependable relationship structure made reporting difficult to trust.
 
-### Raw source landscape
+**Real Power BI model view**
+
+![Power BI model before data modeling](assets/power-bi-before-modeling.png)
+
+**Source-table architecture diagram**
 
 ![Raw tables before modeling](assets/before-data-modeling.png)
 
-### Final semantic model
+### ✅ After — governed dimensional model
+
+Reusable dimensions, clearly defined facts, one-to-many relationships, and controlled filter direction created a dependable semantic layer.
+
+**Real Power BI model view**
+
+![Power BI model after data modeling](assets/power-bi-after-modeling.png)
+
+**Final dimensional-model diagram**
 
 ![Dimensional model after modeling](assets/after-data-modeling.png)
-
-</details>
 
 ---
 
@@ -150,9 +156,37 @@ Validated, secure semantic model for reporting
 
 ## 🧰 Skills demonstrated
 
-| Modeling & BI | Transformation & logic | Quality & governance |
-|---|---|---|
-| Power BI · Dimensional modeling · Star schema design | Power Query · DAX · Surrogate keys | Data validation · Relationship design · Row-level security |
+![Power BI](https://img.shields.io/badge/Power%20BI-Data%20Modeling-F2C811?style=flat-square&logo=powerbi&logoColor=black)
+![Power Query](https://img.shields.io/badge/Power%20Query-ETL-217346?style=flat-square&logo=microsoft-excel&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-Measures-5B2C6F?style=flat-square)
+![Star Schema](https://img.shields.io/badge/Star%20Schema-Dimensional%20Modeling-0078D4?style=flat-square)
+![RLS](https://img.shields.io/badge/Security-Dynamic%20RLS-C62828?style=flat-square&logo=shield&logoColor=white)
+
+### 📐 Data modeling & architecture
+
+- ⭐ **Dimensional modeling** — designed a reusable star-schema-style semantic layer
+- 🔵 **Dimension design** — customer, product, date, geography, campaign, and order flags
+- 🔴 **Fact-table design** — sales, order process, inventory, campaigns, promotions, and targets
+- 🎯 **Grain definition** — declared what every fact row represents before creating relationships
+- 🔑 **Surrogate keys** — introduced stable model keys with consistent `_key` naming
+- 🔗 **Relationship design** — managed cardinality, filter direction, and intentional inactive relationships
+
+### ⚙️ Transformation & business logic
+
+- 🧹 **Power Query** — cleaned, standardized, reshaped, merged, and consolidated source tables
+- 🧮 **DAX** — created centralized measures and row-level calculations
+- 📅 **Date modeling** — built a shared calendar for consistent time analysis
+- 🏷️ **Naming standards** — applied readable `snake_case`, `dim_`, and `fact_` conventions
+- 🧩 **Multi-fact modeling** — integrated several business processes without direct fact-to-fact joins
+- 📊 **Semantic model design** — exposed business-friendly fields instead of technical source structures
+
+### ✅ Quality, performance & governance
+
+- 🛡️ **Dynamic row-level security** — restricted regional data using the signed-in user
+- 🔍 **Data validation** — reconciled totals, row counts, distinct orders, and relationship behavior
+- 🚦 **Model governance** — controlled filter paths and removed ambiguous relationships
+- ⚡ **Model optimization** — removed unnecessary columns and reporting-irrelevant technical fields
+- 📚 **Documentation** — communicated the business problem, architecture, decisions, and user value
 
 ---
 
