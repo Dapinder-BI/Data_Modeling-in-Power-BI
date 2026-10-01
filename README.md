@@ -1,152 +1,172 @@
-# Data Modeling in Power BI
+# 📊 Data Modeling in Power BI
 
-A portfolio project demonstrating how a disconnected, inconsistent collection of operational tables can be transformed into a clean dimensional model in Power BI.
+<div align="center">
 
-The project focuses on model design rather than dashboard styling: defining table grain, separating facts from dimensions, standardizing names, controlling filter direction, validating totals, and applying regional row-level security.
+![Power BI](https://img.shields.io/badge/Power%20BI-Semantic%20Model-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Power Query](https://img.shields.io/badge/Power%20Query-Data%20Transformation-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white)
+![DAX](https://img.shields.io/badge/DAX-Business%20Measures-5B2C6F?style=for-the-badge)
+![Status](https://img.shields.io/badge/Project-Completed-28A745?style=for-the-badge)
 
-## From business problem to solution
+### From disconnected operational tables to a governed, analysis-ready dimensional model
 
-### The business problem
+**Reliable numbers · Faster report development · Reusable dimensions · Regional data security**
 
-The organization had sales, orders, invoices, payments, shipments, inventory, campaigns, targets, customers, and products spread across disconnected operational tables. Several tables described the same business entities in different ways, yearly order data was separated, column names were inconsistent, and reporting attributes were mixed into transaction tables.
+[Download the Power BI project](power-bi/Power_BI_Data_Modeling_Project.pbix) · [View the final model](assets/power-bi-after-modeling.png)
 
-This structure created three major business risks:
+</div>
 
-- **Unreliable reporting:** ambiguous relationships and mismatched table grains could duplicate records or produce incorrect totals.
-- **Slow development and performance:** analysts had to repeatedly interpret technical source tables, while unnecessary columns increased model size and refresh effort.
-- **Poor governance:** inconsistent names, uncontrolled filter paths, and missing security rules made the model difficult to maintain and unsafe to distribute broadly.
+---
 
-As a result, report developers could not confidently answer basic questions such as total sales, active customers, order-processing time, campaign performance, inventory levels, or progress against revenue targets.
+## 🎯 Executive summary
 
-### The solution built
+| Business problem | Solution delivered | Business value |
+|---|---|---|
+| Sales, orders, invoices, inventory, campaigns, and customer data were fragmented across inconsistent source tables. | Redesigned the data as a governed dimensional model with shared dimensions, controlled relationships, reusable DAX measures, and row-level security. | Users receive trusted metrics, analysts build reports faster, and BI teams gain a model that is easier to test, secure, maintain, and extend. |
 
-The raw structure was redesigned as a governed dimensional model in Power BI. The solution:
+### At a glance
 
-- Consolidates related source tables and standardizes them in Power Query.
-- Separates measurable business events into clearly defined fact tables.
-- Creates reusable customer, product, date, geography, campaign, and order-flag dimensions.
-- Preserves the correct grain for each business process.
-- Uses controlled one-to-many relationships with dimensions filtering facts.
-- Centralizes reusable DAX measures for consistent calculations.
-- Validates key totals throughout the transformation process.
-- Applies dynamic regional row-level security so users see only the data they are authorized to access.
+| ⭐ Model | 📈 Analysis | 🔐 Governance | ✅ Quality |
+|---|---|---|---|
+| **6 dimensions** and **6 fact tables** | Sales, orders, inventory, campaigns, promotions, and targets | Dynamic regional row-level security | Grain, totals, cardinality, and filter paths validated |
 
-### How the solution helps users
+---
 
-**Business users** receive consistent numbers across reports and can analyze sales, customers, products, campaigns, inventory, targets, and order timelines without needing to understand the raw source systems.
+## 🔄 Transformation: before → after
 
-**Report developers and analysts** can build visuals faster from friendly dimensions and trusted measures instead of recreating joins and calculations for every report.
+| ❌ Before — disconnected source tables | ✅ After — governed dimensional model |
+|---|---|
+| Inconsistent names, duplicated entities, mixed grains, and no dependable relationship structure | Reusable dimensions, clearly defined facts, one-to-many relationships, and controlled filter direction |
+| ![Power BI model before data modeling](assets/power-bi-before-modeling.png) | ![Power BI model after data modeling](assets/power-bi-after-modeling.png) |
 
-**Managers** gain a reliable view of performance across multiple business processes, including actual-versus-target analysis and the time between ordering, shipping, invoicing, and payment.
+<details>
+<summary><strong>View the illustrated architecture comparison</strong></summary>
 
-**Data and BI teams** benefit from a model that is easier to refresh, test, troubleshoot, extend, secure, and hand over to other developers.
-
-The result is a scalable semantic layer that turns fragmented operational data into trustworthy, analysis-ready information.
-
-## Skills demonstrated
-
-- Power BI
-- Power Query
-- Dimensional modeling
-- Star schema design
-- DAX
-- Data validation
-- Relationship design
-- Surrogate key design
-- Row-level security
-- Analytics engineering
-
-## Before and after
-
-### Raw source structure
-
-The starting point contains disconnected Databricks-style source tables with inconsistent naming, duplicated entities, denormalized attributes, and multiple business processes.
-
-**Power BI model view before transformation**
-
-![Power BI model view before data modeling](assets/power-bi-before-modeling.png)
-
-**Conceptual view of the raw tables**
+### Raw source landscape
 
 ![Raw tables before modeling](assets/before-data-modeling.png)
 
-### Final dimensional model
-
-The completed model uses reusable dimensions and governed one-to-many relationships across sales, order processing, inventory, campaigns, promotion coverage, and sales targets.
-
-**Power BI model view after transformation**
-
-![Power BI model view after data modeling](assets/power-bi-after-modeling.png)
-
-**Conceptual view of the dimensional model**
+### Final semantic model
 
 ![Dimensional model after modeling](assets/after-data-modeling.png)
 
-## Model architecture
+</details>
 
-### Dimensions
+---
 
-- `dim_customer` — customer, account, contact, location, and payment attributes
-- `dim_product` — product, brand, category, supplier, and pricing attributes
-- `dim_date` — shared calendar attributes for time-based analysis
-- `dim_geo` — reusable city and region mapping
-- `dim_campaign` — campaign details, channel, budget, and campaign dates
-- `dim_order_flag` — channel and priority classification for orders
+## 💼 The business challenge
 
-### Facts
+The source structure made even basic questions difficult to answer confidently:
 
-- `fact_sales` — order-line sales at line-item grain
-- `fact_order_process` — order lifecycle dates from order through payment
-- `fact_inventory` — monthly inventory units by product
-- `fact_campaign` — daily marketing performance, including spend, clicks, and impressions
-- `fact_promotion_coverage` — bridge between campaigns and promoted products
-- `fact_sales_target` — revenue targets by date
+- Are sales totals correct, or are relationships duplicating transactions?
+- How many customers are actively ordering?
+- How long does an order take to move from placement to payment?
+- Are campaigns producing engagement across the intended products?
+- How do actual sales compare with monthly targets?
+- Can regional users be restricted to only the data they are authorized to see?
 
-### Supporting table
+### Risks in the original model
 
-- `security` — maps users to regions for dynamic row-level security
+| Risk | Business impact |
+|---|---|
+| **Mixed table grains** | Incorrect totals and silent duplication |
+| **Disconnected and duplicated entities** | Conflicting customer, product, and location views |
+| **Technical and inconsistent naming** | Slow report development and difficult handover |
+| **Uncontrolled filter paths** | Ambiguous calculations and unpredictable reports |
+| **No governed security layer** | Users could receive inappropriate regional visibility |
 
-## Key modeling decisions
+---
 
-- Consolidated yearly order sources before modeling.
-- Defined and preserved the grain of every fact table.
-- Removed duplicate, technical, and reporting-irrelevant columns.
-- Standardized table and column names with `snake_case` conventions.
-- Created surrogate keys with the `_key` suffix.
-- Avoided direct fact-to-fact relationships.
-- Used shared dimensions to filter facts in a single direction.
-- Kept only intentional inactive date/geography relationships.
-- Added centralized measures for reusable business logic.
-- Applied dynamic regional row-level security.
-
-## Validation approach
-
-Model changes were checked incrementally to prevent totals from breaking silently. Validation included:
-
-- Row-count and grain checks after transformations
-- Distinct-order checks for line-level sales
-- Relationship cardinality and filter-direction review
-- Comparison of business totals before and after model changes
-- Role-level security testing with representative users
-
-## Repository contents
+## 💡 The solution
 
 ```text
-.
-|-- assets/
-|   |-- before-data-modeling.png
-|   |-- after-data-modeling.png
-|   |-- power-bi-before-modeling.png
-|   `-- power-bi-after-modeling.png
-|-- power-bi/
-|   `-- Power_BI_Data_Modeling_Project.pbix
-`-- README.md
+Raw operational tables
+        ↓
+Power Query cleanup and consolidation
+        ↓
+Conformed dimensions + business-process facts
+        ↓
+Governed relationships + reusable DAX measures
+        ↓
+Validated, secure semantic model for reporting
 ```
 
-## Open the project
+| What was built | Why it matters |
+|---|---|
+| **Clearly defined fact-table grains** | Protects totals and prevents accidental duplication |
+| **Shared customer, product, date, geography, campaign, and order dimensions** | Creates consistent slicing across business processes |
+| **Single-direction, one-to-many relationships** | Produces predictable filter behavior |
+| **Surrogate keys and `snake_case` naming** | Improves consistency, readability, and maintainability |
+| **Centralized DAX measures** | Gives every report the same business logic |
+| **Dynamic regional row-level security** | Restricts data based on the signed-in user |
+| **Incremental validation checks** | Detects broken totals before changes reach reports |
 
-1. Download or clone this repository.
-2. Open `power-bi/Power_BI_Data_Modeling_Project.pbix` in Power BI Desktop.
-3. Review the model view, Power Query transformations, measures, relationships, and security role.
+---
 
-> The repository includes the finished Power BI file and architecture diagrams. The original raw data files are not included.
+## 🏗️ Model architecture
+
+| Dimensions | Business purpose |
+|---|---|
+| `dim_customer` | Customer, account, contact, location, and payment context |
+| `dim_product` | Product, brand, category, supplier, and pricing context |
+| `dim_date` | Shared calendar for consistent time analysis |
+| `dim_geo` | Reusable city and region mapping |
+| `dim_campaign` | Campaign, channel, budget, and schedule context |
+| `dim_order_flag` | Order channel and priority classification |
+
+| Facts | Grain / analytical purpose |
+|---|---|
+| `fact_sales` | One row per order line; sales, quantity, cost, and discount analysis |
+| `fact_order_process` | One row per order; lifecycle from order through payment |
+| `fact_inventory` | Monthly units by product |
+| `fact_campaign` | Daily campaign clicks, impressions, and spend |
+| `fact_promotion_coverage` | Campaign-to-product promotion coverage |
+| `fact_sales_target` | Revenue target by date |
+
+> `security` maps users to regions and propagates authorized access through `dim_customer` to the relevant facts.
+
+---
+
+## 👥 How it helps users
+
+| Audience | Outcome |
+|---|---|
+| **Business users** | Explore trusted sales, customer, product, inventory, campaign, and target metrics without understanding source-system complexity. |
+| **Analysts & report developers** | Build visuals faster using friendly dimensions and reusable measures instead of rebuilding joins and calculations. |
+| **Managers** | Compare actuals with targets and monitor the complete order-to-payment lifecycle from one model. |
+| **BI & data teams** | Refresh, test, troubleshoot, secure, extend, and hand over the model more confidently. |
+
+---
+
+## ✅ Validation & governance
+
+- Verified row counts and declared the grain of every fact.
+- Used distinct-order checks where the physical table grain is order line.
+- Reviewed relationship cardinality and filter direction.
+- Reconciled business totals after each major transformation.
+- Retained only intentional inactive date and geography relationships.
+- Tested regional security with representative users.
+
+---
+
+## 🧰 Skills demonstrated
+
+| Modeling & BI | Transformation & logic | Quality & governance |
+|---|---|---|
+| Power BI · Dimensional modeling · Star schema design | Power Query · DAX · Surrogate keys | Data validation · Relationship design · Row-level security |
+
+---
+
+## 🚀 Explore the project
+
+1. Download [`Power_BI_Data_Modeling_Project.pbix`](power-bi/Power_BI_Data_Modeling_Project.pbix).
+2. Open it in **Power BI Desktop**.
+3. Review the Power Query transformations, model relationships, measures, and security role.
+
+```text
+Data_Modeling-in-Power-BI/
+├── assets/     # Real Power BI screenshots and architecture diagrams
+├── power-bi/   # Completed PBIX project
+└── README.md
+```
+
+> The repository contains the completed Power BI file and model documentation. Original raw data files are intentionally excluded.
