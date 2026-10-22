@@ -1,6 +1,6 @@
 # 📊 Data Modeling in Power BI
 
-![Data Modeling in Power BI](assets/readme/power-bi-banner.svg)
+![Data Modeling in Power BI](power-bi/documentation/assets/readme/power-bi-banner-v2.svg)
 
 [![Overview](https://img.shields.io/badge/Overview-17354A?style=for-the-badge)](#quick-overview) [![Before & after](https://img.shields.io/badge/Before%20%26%20after-17354A?style=for-the-badge)](#quick-before-after) [![Business value](https://img.shields.io/badge/Business%20value-17354A?style=for-the-badge)](#quick-user-value) [![Engineering](https://img.shields.io/badge/Engineering-17354A?style=for-the-badge)](#quick-engineering) [![Architecture](https://img.shields.io/badge/Architecture-17354A?style=for-the-badge)](#quick-architecture) [![Validation](https://img.shields.io/badge/Validation-17354A?style=for-the-badge)](#quick-validation) [![Skills](https://img.shields.io/badge/Skills-17354A?style=for-the-badge)](#quick-skills) [![Open project](https://img.shields.io/badge/Open%20project-17354A?style=for-the-badge)](#quick-project)
 
@@ -19,7 +19,7 @@
 
 **Reliable numbers · Faster report development · Reusable dimensions · Regional data security**
 
-[Download the Power BI project](power-bi/Power_BI_Data_Modeling_Project.pbix) · [View the final model](assets/power-bi-after-modeling.png)
+[Download the Power BI project](power-bi/Power_BI_Data_Modeling_Project.pbix) · [View the final model](power-bi/documentation/assets/power-bi-after-modeling.png)
 
 </div>
 
@@ -45,7 +45,7 @@
 
 ## 🔄 Transformation: before → after
 
-![From disconnected tables to a governed dimensional model](assets/readme/model-transformation-banner.svg)
+![From disconnected tables to a governed dimensional model](power-bi/documentation/assets/readme/model-transformation-banner.svg)
 
 ### ❌ Before — disconnected source tables
 
@@ -53,11 +53,11 @@ Inconsistent names, duplicated entities, mixed grains, and no dependable relatio
 
 **Real Power BI model view**
 
-![Power BI model before data modeling](assets/power-bi-before-modeling.png)
+![Power BI model before data modeling](power-bi/documentation/assets/power-bi-before-modeling.png)
 
 **Source-table architecture diagram**
 
-![Raw tables before modeling](assets/before-data-modeling.png)
+![Raw tables before modeling](power-bi/documentation/assets/before-data-modeling.png)
 
 ### ✅ After — governed dimensional model
 
@@ -65,11 +65,11 @@ Reusable dimensions, clearly defined facts, one-to-many relationships, and contr
 
 **Real Power BI model view**
 
-![Power BI model after data modeling](assets/power-bi-after-modeling.png)
+![Power BI model after data modeling](power-bi/documentation/assets/power-bi-after-modeling.png)
 
 **Final dimensional-model diagram**
 
-![Dimensional model after modeling](assets/after-data-modeling.png)
+![Dimensional model after modeling](power-bi/documentation/assets/after-data-modeling.png)
 
 ---
 
@@ -278,8 +278,8 @@ Validated, secure semantic model for reporting
 
 ```text
 Data_Modeling-in-Power-BI/
-├── assets/     # Real Power BI screenshots and architecture diagrams
 ├── power-bi/   # Completed PBIX project
+│   └── documentation/assets/  # Real Power BI screenshots and architecture diagrams
 └── README.md
 ```
 
