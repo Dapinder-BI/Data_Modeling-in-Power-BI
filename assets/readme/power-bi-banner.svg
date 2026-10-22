@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="270" viewBox="0 0 1200 270" role="img" aria-labelledby="title desc">
+<title id="title">Data Modeling in Power BI</title><desc id="desc">Navy and gold banner. From fragmented operational data to a governed semantic model. Power Query, dimensional modeling, DAX, and regional security.</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0b1628"/><stop offset="1" stop-color="#16394b"/></linearGradient></defs>
+<rect width="1200" height="270" rx="14" fill="url(#bg)"/><path d="M0 268H1200" stroke="#f2c811" stroke-width="4"/>
+<text x="48" y="82" fill="#f7fafc" font-family="Segoe UI,Arial,sans-serif" font-size="43" font-weight="700">DATA MODELING</text>
+<text x="48" y="139" fill="#f2c811" font-family="Segoe UI,Arial,sans-serif" font-size="48" font-weight="700">IN POWER BI</text>
+<text x="48" y="187" fill="#e0eaf1" font-family="Segoe UI,Arial,sans-serif" font-size="21">From operational data to a governed semantic model</text>
+<text x="48" y="232" fill="#b1c7d5" font-family="Segoe UI,Arial,sans-serif" font-size="17">Power Query · Dimensional Modeling · DAX · Regional Security</text>
+<g transform="translate(871 41)" fill="none" stroke="#f2c811" stroke-opacity=".55" stroke-width="2"><path d="M102 94 30 24M102 94 196 24M102 94 30 170M102 94 196 170"/><g fill="#133248"><rect x="0" y="0" width="64" height="45" rx="7"/><rect x="164" y="0" width="64" height="45" rx="7"/><rect x="0" y="146" width="64" height="45" rx="7"/><rect x="164" y="146" width="64" height="45" rx="7"/></g><rect x="65" y="61" width="80" height="65" rx="10" fill="#f2c811" stroke-opacity="1"/><g stroke="#102b3b" stroke-width="5" stroke-linecap="round"><path d="M85 106V92M104 106V80M123 106V73"/></g><g stroke="#c3d5df" stroke-opacity=".65"><path d="M15 15H48M15 25H38M179 15H213M179 25H202M15 162H48M15 172H38M179 162H213M179 172H202"/></g></g></svg>

@@ -1,5 +1,9 @@
 # 📊 Data Modeling in Power BI
 
+![Data Modeling in Power BI](assets/readme/power-bi-banner.svg)
+
+[![Overview](https://img.shields.io/badge/Overview-17354A?style=for-the-badge)](#quick-overview) [![Before & after](https://img.shields.io/badge/Before%20%26%20after-17354A?style=for-the-badge)](#quick-before-after) [![Business value](https://img.shields.io/badge/Business%20value-17354A?style=for-the-badge)](#quick-user-value) [![Engineering](https://img.shields.io/badge/Engineering-17354A?style=for-the-badge)](#quick-engineering) [![Architecture](https://img.shields.io/badge/Architecture-17354A?style=for-the-badge)](#quick-architecture) [![Validation](https://img.shields.io/badge/Validation-17354A?style=for-the-badge)](#quick-validation) [![Skills](https://img.shields.io/badge/Skills-17354A?style=for-the-badge)](#quick-skills) [![Open project](https://img.shields.io/badge/Open%20project-17354A?style=for-the-badge)](#quick-project)
+
 ## **A real-world Power BI data-modeling project based on challenges and solutions I have handled in professional BI work, recreated with simulated data.**
 
 ### **It demonstrates the same end-to-end approach I use to turn fragmented operational data into accurate reporting, scalable analysis, and secure regional access.**
@@ -21,6 +25,8 @@
 
 ---
 
+<a id="quick-overview"></a>
+
 ## 🎯 Executive summary
 
 | Business problem | Solution delivered | Business value |
@@ -35,7 +41,11 @@
 
 ---
 
+<a id="quick-before-after"></a>
+
 ## 🔄 Transformation: before → after
+
+![From disconnected tables to a governed dimensional model](assets/readme/model-transformation-banner.svg)
 
 ### ❌ Before — disconnected source tables
 
@@ -112,6 +122,8 @@ Validated, secure semantic model for reporting
 
 ---
 
+<a id="quick-engineering"></a>
+
 ## 🛠️ Engineering work completed
 
 > This project was not a relationship-layout exercise. The final model was built through extensive Power Query transformation, grain analysis, data-quality correction, dimensional design, and validation.
@@ -165,6 +177,8 @@ Validated, secure semantic model for reporting
 
 ---
 
+<a id="quick-architecture"></a>
+
 ## 🏗️ Model architecture
 
 | Dimensions | Business purpose |
@@ -189,6 +203,8 @@ Validated, secure semantic model for reporting
 
 ---
 
+<a id="quick-user-value"></a>
+
 ## 👥 How it helps users
 
 | Audience | Outcome |
@@ -200,6 +216,8 @@ Validated, secure semantic model for reporting
 
 ---
 
+<a id="quick-validation"></a>
+
 ## ✅ Validation & governance
 
 - Verified row counts and declared the grain of every fact.
@@ -210,6 +228,8 @@ Validated, secure semantic model for reporting
 - Tested regional security with representative users.
 
 ---
+
+<a id="quick-skills"></a>
 
 ## 🧰 Skills demonstrated
 
@@ -247,6 +267,8 @@ Validated, secure semantic model for reporting
 - 📚 **Documentation** — communicated the business problem, architecture, decisions, and user value
 
 ---
+
+<a id="quick-project"></a>
 
 ## 🚀 Explore the project
 
