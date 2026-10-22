@@ -1,6 +1,6 @@
 # 📊 Data Modeling in Power BI
 
-![Data Modeling in Power BI](power-bi/documentation/assets/readme/power-bi-banner-v2.svg)
+![Data Modeling in Power BI](power-bi/documentation/assets/readme/power-bi-banner-v3.svg)
 
 [![Overview](https://img.shields.io/badge/Overview-17354A?style=for-the-badge)](#quick-overview) [![Before & after](https://img.shields.io/badge/Before%20%26%20after-17354A?style=for-the-badge)](#quick-before-after) [![Business value](https://img.shields.io/badge/Business%20value-17354A?style=for-the-badge)](#quick-user-value) [![Engineering](https://img.shields.io/badge/Engineering-17354A?style=for-the-badge)](#quick-engineering) [![Architecture](https://img.shields.io/badge/Architecture-17354A?style=for-the-badge)](#quick-architecture) [![Validation](https://img.shields.io/badge/Validation-17354A?style=for-the-badge)](#quick-validation) [![Skills](https://img.shields.io/badge/Skills-17354A?style=for-the-badge)](#quick-skills) [![Open project](https://img.shields.io/badge/Open%20project-17354A?style=for-the-badge)](#quick-project)
 
